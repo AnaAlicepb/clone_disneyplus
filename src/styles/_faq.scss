@@ -1,4 +1,4 @@
-.available-devices {
+.faq {
     padding: 5.6vw;
 
     h2 {
@@ -6,29 +6,69 @@
         margin-bottom: 24px;
     }
 
-    &__list {
-        display: grid;
-        gap: 24px;
-        grid-template-columns: repeat(4, 1fr);
-
-        @media (max-width: 768px) {
-            grid-template-columns: 1fr 1fr;
-        }
-
+    &__questions {
         &__item {
-            text-align: center;
+            background-color: #13151d;
+            margin-bottom: 16px;
 
-            h4 {
-                margin-top: 20px;
-                margin-bottom: 24px;
+            &__question {
+                color: #fff;
+                font-size: 20px;
+                padding: 24px;
+                display: block;
+                cursor: pointer;
+                position: relative;
+
+                &::after {
+                    content: '+';
+                    position: absolute;
+                    top: 0;
+                    right: 24px;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    font-size: 40px;
+                }
             }
 
-            li {
-                list-style-type: none;
+            &__answer {
+                height: 0;
+                overflow: hidden;
+                padding: 0 24px;
+                transition: height, .7s ease;
             }
 
-            img {
-                max-width: 100%;
+            &--is-open {
+                .faq__questions__item__question::after {
+                    content: '-';
+                }
+                
+                .faq__questions__item__answer {
+                    height: auto;
+                    padding-top: 24px;
+                    padding-bottom: 24px;
+                    transition: height, .7s ease;
+                }
+                .faq__questions__item__answer ul,p {
+                    list-style-type: none; 
+                    padding-left: 20px; 
+                }
+                
+                .faq__questions__item__answer ul li  {
+                    margin-bottom: 20px; 
+                    position: relative; 
+                }
+                
+                .faq__questions__item__answer ul li::before {
+                    content: "\2022"; 
+                    position: absolute; 
+                    left: -20px; 
+                }
+                .faq__questions__item__answer p {
+                    margin: 15px;
+                }
+                
+                
             }
         }
     }
