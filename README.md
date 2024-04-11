@@ -51,10 +51,11 @@
 <section id="contato">
     <h2>Contato</h2>
     <p>Para mais informações, entre em contato:</p>
-   <ul>
+  <ul>
     <li><a href="https://linktr.ee/anaeanali5" target="_blank"><img src="https://img.shields.io/badge/Ana_Alice_Rodrigues-blue?style=for-the-badge" alt="Ana Alice Rodrigues"></a></li>
     <li><a href="https://clone-disneyplus-ana.vercel.app" target="_blank"><img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel"></a></li>
-   </ul>
+</ul>
+
 
 
 </section>
